@@ -1,0 +1,174 @@
+/* IMAGEM DE FUNDO BORRADA */
+.background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../public/resources/images/bottom.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: blur(1px);
+}
+
+/* CABEÇALHO */
+.conteiner-cabecalho {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 25px;
+    color: #fff;
+}
+
+/* ÁREA PRINCIPAL */
+#register-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 15px;
+}
+
+/* CARD DE CADASTRO */
+.cadastro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+/* CONTEÚDO DO FORM */
+.conteudo-cadastro {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* GRUPOS DE INPUT */
+.form-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+/* ESTILO DOS INPUTS */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* BOTÃO DE CADASTRO */
+#botaoCadastrar {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#botaoCadastrar:hover {
+    background-color: #1558d6;
+}
+
+/* NOME E SOBRENOME LADO A LADO */
+#inputName {
+    display: flex;
+    gap: 10px;
+}
+
+.inputSobrenome {
+    display: flex;
+    gap: 10px;
+}
+
+.inputNome,
+.inputSobrenome,
+.form-row {
+    flex: 1;
+}
+
+/* RODAPÉ FIXADO */
+.footer {
+    background-color: #003999;
+    color: #fff;
+    text-align: center;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+#box-link {
+    display: flex;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+}
+
+.help-icon {
+    text-decoration: none;
+    color: #333;
+    justify-items: center;
+    background-position: 60px;
+}
+
+#box-link{
+    color: #003999;
+}
+
+
+.label-help-group {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+
+  .tooltip-ajuda {
+    position: absolute; /* importante pra posicionar em relação ao pai */
+    background-color: #222;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    max-width: 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    font-size: 14px;
+    display: none; /* começa escondido */
+  }
+  
+  /* Para posicionar do lado direito, por exemplo */
+  .tooltip-ajuda.show {
+    display: block;
+    top: 50%;
+    left: 110%; /* sai um pouco da largura do botão */
+    transform: translateY(-50%);
+    /* Você pode colocar uma seta depois, se quiser */
+  }
+

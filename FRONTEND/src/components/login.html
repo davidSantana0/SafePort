@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../public/resources/icons/anchor.png" type="image/png" />
+    <link rel="stylesheet" href="/src/css/login.css">
+    <link href="https://unpkg.com/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <script type="module" src="../js/login.js" defer></script>
+    <title>Login | SafePort</title>
+</head>
+
+<body>
+    <main id="container">
+
+        <section id="login">
+            <form id="loginForm">
+                <header>
+                    <h1>SafePort</h1>
+                </header>
+
+                <div class="input-box">
+                    <input placeholder="Email" type="text" id="inputEmail" required>
+                    <i class="bi bi-envelope-fill"></i>
+                </div>
+
+                <div class="input-box">
+                    <input placeholder="Senha" type="password" id="inputPassword" required>
+                    <i class="bi bi-lock-fill"></i>
+                </div>
+
+                <button type="submit" class="login" id="buttonLogin">Login</button>
+
+                <div class="register-link">
+                    <p>Não tem conta? <a href="./register.html">Cadastrar-se</a></p>
+                </div>
+
+            </form>
+        </section>
+
+        <section id="info-box">
+            <div class="info-content">
+                <h2>The easiest way to send your files privately</h2>
+                <p>End to end encrypted transfers</p>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>

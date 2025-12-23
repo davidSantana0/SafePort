@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../../public/resources/icons/anchor.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../../public/fonts/Roboto/RobotoMono-Italic-VariableFont_wght.ttf" />
+  <link rel="stylesheet" href="../../src/css/stylesheet/global.css" />
+  <link rel="stylesheet" href="../css/register.css" />
+  <script src="../js/register.js" defer></script>
+  <title>Cadastre-se no SafePort</title>
+</head>
+
+<body>
+  <header class="conteiner-cabecalho">
+    <div id="logo-escrito">
+      <h1 id="titulo-safeport">SafePort</h1>
+    </div>
+    <nav class="social-icons">
+      <a href="https://wa.me/75983339413" title="WhatsApp" target="_blank" class="links" id="icon-whatzapp">
+        <i class="fa-brands fa-whatsapp fa-sm"></i>
+      </a>
+      <a href="https://www.instagram.com/bug_purador/" title="Instagram" target="_blank" class="links"
+        id="icon-instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="mailto:davidssSantana.119@gmail.com" title="Email" target="_blank" class="links" id="icon-gmail">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+    </nav>
+  </header>
+
+  <main id="register-box">
+
+    <div class="background-img"></div>
+
+    <section class="cadastro-section">
+      <header class="conteudo-cadastro">
+        <h2 class="sub-titulo">Criar uma nova conta</h2>
+        <p class="sub-text">Onde seus dados ancoram com segurança</p>
+      </header>
+
+      <!-- Frontend conectado com o Backend -->
+      <form id="form-cadastro">
+        <div class="form-row">
+          <label for="inputName"></label>
+          <input type="text" name="nome" id="inputName" placeholder="Nome" autocomplete="off" required />
+        </div>
+
+        <div class="form-row">
+          <div class="label-help-group">
+            <label for="dataNascimento">Data de nascimento</label>
+            <a href="#" class="help-icon" id="ajudaData" title="Clique para obter informações">
+              <i class="fa-solid fa-circle-question"></i>
+            </a>
+          </div>
+          <div class="tooltip-ajuda" id="ajudaDataNascimento" style="display: none;">
+            Ao <strong>informar sua data de nascimento</strong>, você ajuda a garantir que sua experiência seja adequada
+            à sua idade.
+          </div>
+          <input type="date" name="dataNascimento" id="dataNascimento" required />
+        </div>
+
+        <div class="form-row">
+          <div class="label-help-group">
+            <label>Gênero</label>
+            <a href="#" class="help-icon" id="ajudaGenero" title="Clique para obter informações">
+              <i class="fa-solid fa-circle-question"></i>
+            </a>
+          </div>
+          <div class="tooltip-ajuda" id="ajudaGeneroTexto" style="display: none;">
+            Selecione o gênero que você se identifica. Isso ajuda na personalização do perfil.
+          </div>
+          <div class="radio-group">
+            <label for="sexFeminino">
+              <input type="radio" name="sex" id="sexFeminino" value="1" required /> Feminino
+            </label>
+            <label for="sexMasculino">
+              <input type="radio" name="sex" id="sexMasculino" value="2" required /> Masculino
+            </label>
+            <label for="sexAnimo">
+              <input type="radio" name="sex" id="sexAnimo" value="3" required /> Prefiro não dizer
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="inputEmail"></label>
+          <input type="email" name="email" id="inputEmail" placeholder="Email" required />
+        </div>
+
+        <div class="form-row">
+          <label for="inputSenha"></label>
+          <input type="password" name="senha" id="inputSenha" placeholder="Senha" required />
+        </div>
+
+        <div class="form-row">
+          <label for="confirmaSenha"></label>
+          <input type="password" name="confirmacaoSenha" id="confirmaSenha" placeholder="Confirme sua senha" required />
+        </div>
+
+        <button type="submit" id="botaoCadastrar">Cadastrar-se</button>
+        <a href="./login.html" id="box-link">Já tenho conta!</a>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 SafePort. Todos os direitos reservados.</p>
+      <nav id="footer-links">
+        <a href="#" id="footer-politica">Políticas de Privacidade</a> |
+        <a href="#" id="footer-central">Central de Privacidade</a> |
+        <a href="about.html" id="footer-sobre">Sobre</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+
+</html>

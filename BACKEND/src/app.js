@@ -1,52 +1,50 @@
-import route from './routes/routeUser.js'
-import { engine, create } from 'express-handlebars'
-import path from 'path'
-import { fileURLToPath } from 'url'
-import { query } from './config/Db.js'
-import express from 'express'
-import cors from 'cors'
+import express from "express";
+import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
+import { create } from "express-handlebars";
+import routes from "./routes/route.js";
+import { query } from "./config/Db.js";
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+const app = express();
 
-const app = express()
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use(express.json())
+app.use(
+  cors({
+    origin: "http://127.0.0.1:5501",
+    credentials: true,
+  })
+);
 
-app.use(cors({
-  origin: 'http://127.0.0.1:5501',
-  credentials: true
-}))
-
-app.use(route)
-
+// Handlebars
 const hbs = create({
-  extname: 'hbs',
-  defaultLayout: 'main',
-  layoutsDir: path.join(__dirname, 'views', 'layout'),
-  helpers: {
-    json: (context) => JSON.stringify(context, null, 2)
-  }
-})
+  extname: "hbs",
+  defaultLayout: "main",
+  layoutsDir: path.join(__dirname, "views/layout"),
+});
 
-app.engine('hbs', hbs.engine)
+app.engine("hbs", hbs.engine);
+app.set("view engine", "hbs");
+app.set("views", path.join(__dirname, "views"));
 
-app.set('view engine', 'hbs')
-app.set('views', path.join(__dirname, 'views'))
+// Rotas
+app.use(routes);
 
-
-async function connectingDB() {
+// Teste de conexão com DB
+async function connectDB() {
   try {
-    await query('SELECT NOW()')
-    console.log("Connected Database")
+    await query("SELECT 1");
+    console.log("Database connected");
   } catch (err) {
-    console.log("Error connecting to Database", err)
-
+    console.error("Database connection error", err);
   }
 }
 
-connectingDB()
+connectDB();
 
-
-export default app
+export default app;

@@ -1,0 +1,65 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#page1 {
+    background-image: url("../../public/resources/images/ancora.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#page2 {
+    background-image: url("../../public/resources/images/barco.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#page3 {
+    background-image: url("../../public/resources/images/figura-ancora.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#page4 {
+    background-image: url("../../public/resources/images/porto.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#page5 {
+    background-image: url("../../public/resources/images/figura-ancora.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#page6 {
+    background-image: url();
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#conteiner-conteudo {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+
+.scroll-effect {
+    scroll-snap-align: start;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
